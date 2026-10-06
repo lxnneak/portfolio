@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: min(100%, 72rem);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: rgb(54, 87, 117, 0.87);
+  color: #fff;
+}
+
+h2 {
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #d8e8f2;
+}
+
+#intro,
+#tech-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+#intro {
+  max-width: 56rem;
+  margin: 1rem;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#description {
+  flex: 1;
+}
+
+#profile-pic {
+  height: 15rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+#tech-stack ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin: 0;
+  padding-left: 0;
+}
+
+#tech-stack li {
+  padding: 0.25rem 0;
+}
+
+#tech-stack li:first-child::marker {
+  content: "";
+}
