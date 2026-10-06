@@ -46,7 +46,7 @@ h3 {
   gap: 2rem;
 }
 
-#description {
+#intro-description {
   flex: 1;
 }
 
@@ -56,13 +56,18 @@ h3 {
   margin-left: 1rem;
 }
 
-.school-name {
+.school-name,
+.workplace {
   margin-bottom: 0.25rem;
 }
 
 .date-range {
   font-style: italic;
   margin-top: 0;
+}
+
+.description {
+  padding: 1rem 2rem;
 }
 
 #tech-stack ul {
