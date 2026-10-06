@@ -56,6 +56,15 @@ h3 {
   margin-left: 1rem;
 }
 
+.school-name {
+  margin-bottom: 0.25rem;
+}
+
+.date-range {
+  font-style: italic;
+  margin-top: 0;
+}
+
 #tech-stack ul {
   display: flex;
   flex-wrap: wrap;
