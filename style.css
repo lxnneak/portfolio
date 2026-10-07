@@ -12,6 +12,11 @@ body {
   padding: 3rem 2rem;
   background-color: rgb(54, 87, 117, 0.87);
   color: #fff;
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 h2 {
