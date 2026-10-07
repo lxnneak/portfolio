@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -9,7 +11,6 @@ body {
   width: min(100%, 72rem);
   min-height: 100vh;
   margin: 0 auto;
-  padding: 3rem 2rem;
   background-color: rgb(54, 87, 117, 0.87);
   color: #fff;
   font-size: 1.25rem;
@@ -32,18 +33,69 @@ h3 {
   color: #d8e8f2;
 }
 
-#tech-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
+a {
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 0.25em;
 }
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+/* header & navigation */
+header {
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 0;
+  background-color: rgb(54, 87, 117);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: min(100%, 68rem);
+  margin-inline: auto;
+}
+
+/* link in nav but outside the ul */
+nav > a {
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main {
+  padding: 3rem 2rem;
+  margin-top: 2rem; /* gives space below the header */
+}
+
+/* intro section */
 
 #intro {
   display: flex;
   flex-direction: row;
-  max-width: 56rem;
-  margin: 1rem;
+  align-items: center;
+  gap: 2rem;
+  /* max-width: 56rem; */
+  margin: 3rem;
 }
 
 .intro-content {
@@ -60,8 +112,26 @@ h3 {
 #profile-pic {
   height: 15rem;
   border-radius: 50%;
-  margin-left: 1rem;
+  margin: 0 1rem;
 }
+
+/* projects section */
+
+#projects ul {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.card {
+  padding: 1rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* experience section */
 
 .school-name,
 .workplace {
@@ -82,6 +152,15 @@ h3 {
   border-bottom: none;
 }
 
+/* tech stack section */
+
+#tech-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
 #tech-stack ul {
   display: flex;
   flex-wrap: wrap;
@@ -96,4 +175,45 @@ h3 {
 
 #tech-stack li:first-child::marker {
   content: "";
+}
+
+/* media queries for responsive design */
+
+@media (max-width: 36rem) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 50rem) {
+  #intro {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .intro-content {
+    width: 100%;
+  }
+
+  img#profile-pic {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  #projects ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 20rem;
+  }
 }
