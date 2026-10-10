@@ -133,6 +133,85 @@ main {
 
 /* experience section */
 
+.tab-wrapper {
+  max-width: 50rem;
+  margin: 2rem auto;
+}
+
+#toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  padding-left: 1rem;
+}
+
+#education-btn,
+#work-experience-btn {
+  /*   padding: 0.5rem 1rem;
+  margin: 1rem 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem; */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom: none; /* Leaves bottom open to merge with section */
+  cursor: pointer;
+  position: relative;
+  top: 1px; /* Overlaps section top border by 1px */
+  transition: all 0.2s ease;
+}
+
+#education-btn:hover,
+#work-experience-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#education-btn.active,
+#work-experience-btn.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  z-index: 2;
+}
+
+#education,
+#work-experience {
+  display: none;
+}
+
+#education.active,
+#work-experience.active {
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.resume-item {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* remove border for the last item */
+.resume-item:last-child {
+  border-bottom: none;
+}
+
 .school-name,
 .workplace {
   margin-bottom: 0.25rem;
@@ -141,15 +220,6 @@ main {
 .date-range {
   font-style: italic;
   margin-top: 0;
-}
-
-.description {
-  padding: 1rem 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-#education article:last-child .description,
-#work-experience article:last-child .description {
-  border-bottom: none;
 }
 
 /* tech stack section */
@@ -173,6 +243,7 @@ main {
   padding: 0.25rem 0;
 }
 
+/* remove marker for the first tech stack item */
 #tech-stack li:first-child::marker {
   content: "";
 }
