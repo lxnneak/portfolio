@@ -122,6 +122,7 @@ main {
   text-align: center;
   justify-content: space-between;
   gap: 2rem;
+  padding: 0;
 }
 
 .card {
@@ -133,9 +134,78 @@ main {
 
 /* experience section */
 
+.portfolio-grid-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 65rem; /* Expanded to comfortably fit both columns */
+  margin: 0 auto;
+}
+
+/* tech stack section */
+
+.tech-stack-container {
+  width: 18rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tech-stack-title {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 0.5rem;
+}
+
+.tech-group {
+  margin-bottom: 1.25rem;
+}
+
+.tech-group:last-child {
+  margin-bottom: 0;
+}
+
+.tech-group h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-pills li {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 2rem;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+/* resume */
+
 .tab-wrapper {
-  max-width: 50rem;
-  margin: 2rem auto;
+  /*  max-width: 50rem;
+  margin: 2rem auto; */
+  flex: 1; /* Takes up all remaining horizontal space */
+  width: 100%;
 }
 
 #toggle-buttons {
@@ -148,16 +218,6 @@ main {
 
 #education-btn,
 #work-experience-btn {
-  /*   padding: 0.5rem 1rem;
-  margin: 1rem 0.5rem;
-  border: none;
-  border-radius: 0.25rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.5rem; */
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.7);
@@ -196,7 +256,7 @@ main {
   display: block;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 0.5rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
   background-color: rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 1;
@@ -222,32 +282,6 @@ main {
   margin-top: 0;
 }
 
-/* tech stack section */
-
-#tech-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-}
-
-#tech-stack ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
-  margin: 0;
-  padding-left: 0;
-}
-
-#tech-stack li {
-  padding: 0.25rem 0;
-}
-
-/* remove marker for the first tech stack item */
-#tech-stack li:first-child::marker {
-  content: "";
-}
-
 /* media queries for responsive design */
 
 @media (max-width: 36rem) {
@@ -270,6 +304,7 @@ main {
 
   .intro-content {
     width: 100%;
+    gap: 0;
   }
 
   img#profile-pic {
@@ -286,5 +321,14 @@ main {
 
   .card {
     width: 20rem;
+  }
+
+  .portfolio-grid-wrapper {
+    flex-direction: column;
+  }
+
+  .tech-stack-container {
+    width: 100%;
+    margin-top: 0;
   }
 }

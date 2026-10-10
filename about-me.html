@@ -93,113 +93,144 @@
         </ul>
       </section>
 
-      <!-- resume -->
-      <section class="tab-wrapper">
-        <span id="toggle-buttons">
-          <button
-            id="education-btn"
-            type="button"
-            class="active"
-            aria-pressed="true"
-          >
-            Education
-          </button>
-          <button id="work-experience-btn" type="button" aria-pressed="false">
-            Work Experience
-          </button>
-        </span>
+      <h2><strong>Experience & Skills</strong></h2>
 
-        <!-- resume tabs  -->
-        <section id="education" class="active">
-          <h2><strong>Education</strong></h2>
-          <article class="resume-item">
-            <h3 class="school-name">UX Engineer | Chas Academy</h3>
-            <p class="date-range">Sep 2026 - Jun 2028</p>
-            <p class="description">
-              Focusing on user-centered UX/UI design and frontend development,
-              covering rapid prototyping, interaction design, and AI-assisted
-              workflows as well as user testing, scalable interface
-              architecture, and cross-functional product strategy.
-            </p>
-          </article>
+      <section class="portfolio-grid-wrapper">
+        <!-- tech stack -->
+        <aside class="tech-stack-container" aria-label="Tech Stack">
+          <h3 class="tech-stack-title">Tech Stack</h3>
 
-          <article class="resume-item">
-            <h3 class="school-name">
-              Java Developer | STI - Stockholms Tekniska Institut
-            </h3>
-            <p class="date-range">Sep 2024 - Jun 2026</p>
-            <p class="description">
-              Full-stack software development with a primary focus on Java,
-              Spring Boot, TypeScript, and React. The program also covered
-              databases, API development, cloud services, secure coding
-              practices, and practical application of agile methodologies in
-              team-based projects.
-            </p>
-          </article>
+          <div class="tech-group">
+            <h4>Backend & Databases</h4>
+            <ul class="tech-pills">
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>Dropwizard</li>
+              <li>Node.js</li>
+              <li>REST APIs</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+
+          <div class="tech-group">
+            <h4>Frontend & Web</h4>
+            <ul class="tech-pills">
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+            </ul>
+          </div>
+
+          <div class="tech-group">
+            <h4>Tools & Web</h4>
+            <ul class="tech-pills">
+              <li>Git</li>
+              <li>Docker</li>
+              <li>Postman</li>
+              <li>CI/CD</li>
+              <li>Testing (Unit/Integration)</li>
+              <li>Pact (Contract Testing)</li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- resume -->
+        <section class="tab-wrapper">
+          <span id="toggle-buttons">
+            <button
+              id="education-btn"
+              type="button"
+              class="active"
+              aria-pressed="true"
+            >
+              Education
+            </button>
+            <button id="work-experience-btn" type="button" aria-pressed="false">
+              Work Experience
+            </button>
+          </span>
+
+          <!-- resume tabs  -->
+          <section id="education" class="active">
+            <h2><strong>Education</strong></h2>
+            <article class="resume-item">
+              <h3 class="school-name">UX Engineer | Chas Academy</h3>
+              <p class="date-range">Sep 2026 - Jun 2028</p>
+              <p class="description">
+                Focusing on user-centered UX/UI design and frontend development,
+                covering rapid prototyping, interaction design, and AI-assisted
+                workflows as well as user testing, scalable interface
+                architecture, and cross-functional product strategy.
+              </p>
+            </article>
+
+            <article class="resume-item">
+              <h3 class="school-name">
+                Java Developer | STI - Stockholms Tekniska Institut
+              </h3>
+              <p class="date-range">Sep 2024 - Jun 2026</p>
+              <p class="description">
+                Full-stack software development with a primary focus on Java,
+                Spring Boot, TypeScript, and React. The program also covered
+                databases, API development, cloud services, secure coding
+                practices, and practical application of agile methodologies in
+                team-based projects.
+              </p>
+            </article>
+          </section>
+
+          <section id="work-experience">
+            <h2><strong>Work Experience</strong></h2>
+            <article class="resume-item">
+              <h3 class="workplace">
+                Software Developer Intern | Postkodlotteriet
+              </h3>
+              <p class="date-range">Jan 2026 - May 2026</p>
+              <p class="description">
+                Focused on backend development, migrating endpoints to
+                Java-based microservices and managing API data flows. Applied
+                practical testing methodology in Postman and conducted contract
+                testing with Pact.
+              </p>
+            </article>
+
+            <article class="resume-item">
+              <h3 class="workplace">
+                Relief Worker | BonZi personligt stöd AB
+              </h3>
+              <p class="date-range">Sep 2024 - ongoing</p>
+              <p class="description">
+                Providing tailored support to families with children with
+                neurodevelopmental disorders, demonstrating high responsibility,
+                adaptability, and clear communication.
+              </p>
+            </article>
+
+            <article class="resume-item">
+              <h3 class="workplace">Support Worker | AIS ledsagarservice</h3>
+              <p class="date-range">Oct 2018 - Sep 2024</p>
+              <p class="description">
+                Assisted individuals with various disabilities to support their
+                independence, building strong relationships through empathy and
+                active listening.
+              </p>
+            </article>
+
+            <article class="resume-item">
+              <h3 class="workplace">
+                Preschool Teacher Assistant | Förskolan Lyktan
+              </h3>
+              <p class="date-range">Dec 2018 - Jul 2024</p>
+              <p class="description">
+                Conducted daily pedagogical activities in teams, developing
+                strong skills in collaboration, conflict resolution, and
+                fast-paced environment management.
+              </p>
+            </article>
+          </section>
         </section>
-
-        <section id="work-experience">
-          <h2><strong>Work Experience</strong></h2>
-          <article class="resume-item">
-            <h3 class="workplace">
-              Software Developer Intern | Postkodlotteriet
-            </h3>
-            <p class="date-range">Jan 2026 - May 2026</p>
-            <p class="description">
-              Focused on backend development, migrating endpoints to Java-based
-              microservices and managing API data flows. Applied practical
-              testing methodology in Postman and conducted contract testing with
-              Pact.
-            </p>
-          </article>
-
-          <article class="resume-item">
-            <h3 class="workplace">Relief Worker | BonZi personligt stöd AB</h3>
-            <p class="date-range">Sep 2024 - ongoing</p>
-            <p class="description">
-              Providing tailored support to families with children with
-              neurodevelopmental disorders, demonstrating high responsibility,
-              adaptability, and clear communication.
-            </p>
-          </article>
-
-          <article class="resume-item">
-            <h3 class="workplace">Support Worker | AIS ledsagarservice</h3>
-            <p class="date-range">Oct 2018 - Sep 2024</p>
-            <p class="description">
-              Assisted individuals with various disabilities to support their
-              independence, building strong relationships through empathy and
-              active listening.
-            </p>
-          </article>
-
-          <article class="resume-item">
-            <h3 class="workplace">
-              Preschool Teacher Assistant | Förskolan Lyktan
-            </h3>
-            <p class="date-range">Dec 2018 - Jul 2024</p>
-            <p class="description">
-              Conducted daily pedagogical activities in teams, developing strong
-              skills in collaboration, conflict resolution, and fast-paced
-              environment management.
-            </p>
-          </article>
-        </section>
-      </section>
-
-      <!-- tech stack -->
-      <section id="tech-stack">
-        <h2><strong>Tech stack</strong></h2>
-        <ul>
-          <li>Java</li>
-          <li>Spring Boot</li>
-          <li>React</li>
-          <li>Typescript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>SQL</li>
-          <li>Git</li>
-        </ul>
       </section>
     </main>
   </body>
