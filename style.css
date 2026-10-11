@@ -81,12 +81,19 @@ a:focus-visible {
   text-decoration: underline;
 }
 
+button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+  z-index: 3;
+}
+
 main {
   width: min(100%, 72rem);
   padding: 3rem 2rem;
   margin-top: 2rem; /* gives space below the header */
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 1rem;
 }
 
 /* intro section */
@@ -163,7 +170,7 @@ main {
 /* tech stack section */
 
 .tech-stack-container {
-  width: 18rem;
+  width: 20rem;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 0.5rem;
@@ -216,7 +223,7 @@ main {
   cursor: default;
 }
 
-/* resume */
+/* resume tabs */
 
 .tab-wrapper {
   flex: 1;
@@ -261,11 +268,6 @@ main {
   z-index: 2;
 }
 
-#education,
-#work-experience {
-  display: none;
-}
-
 #education.active,
 #work-experience.active {
   display: block;
@@ -275,6 +277,11 @@ main {
   background-color: rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 1;
+}
+
+#education[hidden],
+#work-experience[hidden] {
+  display: none;
 }
 
 .resume-item {
@@ -381,6 +388,9 @@ footer p {
     width: 100%;
     margin-top: 0;
   }
+
+  main {
+  }
 }
 
 @media (max-width: 25rem) {
@@ -396,7 +406,7 @@ footer p {
   }
 }
 
-/* Fix footer at the bottom for tall screens */
+/* fix footer at the bottom for tall screens */
 @media (min-height: 92rem) {
   footer {
     position: fixed;

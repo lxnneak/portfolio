@@ -6,17 +6,16 @@ const workExperienceSection = document.getElementById("work-experience");
 const header = document.querySelector("header");
 
 function activateTab(activeBtn, inactiveBtn, activeSection, inactiveSection) {
-  // Toggle CSS active class
   activeBtn.classList.add("active");
   inactiveBtn.classList.remove("active");
 
-  // Toggle ARIA pressed state
   activeBtn.setAttribute("aria-pressed", "true");
   inactiveBtn.setAttribute("aria-pressed", "false");
 
-  // Toggle visible section
   activeSection.classList.add("active");
   inactiveSection.classList.remove("active");
+  activeSection.hidden = false;
+  inactiveSection.hidden = true;
 }
 
 educationBtn.addEventListener("click", () => {
