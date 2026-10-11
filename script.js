@@ -3,6 +3,8 @@ const workExperienceBtn = document.getElementById("work-experience-btn");
 const educationSection = document.getElementById("education");
 const workExperienceSection = document.getElementById("work-experience");
 
+const header = document.querySelector("header");
+
 function activateTab(activeBtn, inactiveBtn, activeSection, inactiveSection) {
   // Toggle CSS active class
   activeBtn.classList.add("active");
@@ -33,4 +35,12 @@ workExperienceBtn.addEventListener("click", () => {
     workExperienceSection,
     educationSection,
   );
+});
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 20) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });
