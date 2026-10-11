@@ -9,8 +9,7 @@ body {
   flex-direction: column;
   gap: 3rem;
   width: 100%;
-  /* min-height: 100vh; */
-  margin: 0 auto; /* left right 0*/
+  margin: 0 auto;
   background-color: rgb(54, 87, 117, 0.87);
   color: #fff;
   font-size: 1.25rem;
@@ -93,7 +92,6 @@ main {
   margin-top: 2rem; /* gives space below the header */
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 1rem;
 }
 
 /* intro section */
@@ -125,12 +123,13 @@ main {
 }
 
 .intro-greeting {
-  text-align: left;
   margin-bottom: 0;
 }
 
 #intro-description {
   flex: 1;
+  text-align: justify;
+  font-size: 1.5rem;
 }
 
 #profile-pic {
@@ -351,7 +350,7 @@ footer p {
 
 /* media queries for responsive design */
 
-@media (max-width: 50rem) {
+@media (max-width: 52rem) {
   #intro {
     flex-direction: column-reverse;
     text-align: center;
@@ -390,6 +389,7 @@ footer p {
   }
 
   main {
+    padding-bottom: 1rem;
   }
 }
 

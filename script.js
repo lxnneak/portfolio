@@ -5,6 +5,7 @@ const workExperienceSection = document.getElementById("work-experience");
 
 const header = document.querySelector("header");
 
+// marks the active tab and section and sets the other tab as hidden
 function activateTab(activeBtn, inactiveBtn, activeSection, inactiveSection) {
   activeBtn.classList.add("active");
   inactiveBtn.classList.remove("active");
@@ -36,6 +37,7 @@ workExperienceBtn.addEventListener("click", () => {
   );
 });
 
+// if the page has scrolled more than 20 pixels, add the "scrolled" class to the header
 window.addEventListener("scroll", () => {
   if (window.scrollY > 20) {
     header.classList.add("scrolled");
