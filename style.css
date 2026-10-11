@@ -298,6 +298,8 @@ main {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   text-align: center;
   padding: 1rem 0;
@@ -305,6 +307,35 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
+}
+
+/* contact links */
+
+footer nav {
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-icons img {
+  width: 2.5rem;
+  height: 2.5rem;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-icons a:hover img {
+  opacity: 0.7;
+  transform: translateY(-2px); /* Subtle lift on hover */
 }
 
 footer p {
